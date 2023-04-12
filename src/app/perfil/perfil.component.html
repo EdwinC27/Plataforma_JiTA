@@ -1,1 +1,29 @@
-<p>perfil works!</p>
+<!-- Imagen y Presentacion -->
+<section class="section1">
+  <img src="../../assets/imgCarrusel/01.png" alt="Usuario">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat odio porro qui
+    veniam atque consectetur, at, labore nisi nihil iste animi magni modi possimus alias,
+    repellat adipisci suscipit nam. Nostrum?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat odio porro qui
+    veniam atque consectetur, at, labore nisi nihil iste animi magni modi possimus alias,
+    repellat adipisci suscipit nam. Nostrum?</p>
+</section>
+
+
+<!-- cursos terminados -->
+<section class="section2">
+<h1 class="text-center">Certificados</h1>
+
+  <!-- Galeria -->
+  <div class="col p-3 border border-secondary border-success rounded" style=" margin: 1%; margin-left: 0%;">
+    <!-- Escanea si tiene elementos el arreglo llamado "imagenes" -->
+    <ngb-carousel *ngIf="images">
+      <!-- Recorre el arreglo llamado "imagenes" -->
+      <ng-template ngbSlide *ngFor="let item of images">
+        <div class="picsum-img-wrapper">
+          <img [src]="item" alt="Random first slide" style="width: 150%; margin-left: -170px;">
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</section>
