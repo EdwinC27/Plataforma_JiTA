@@ -1,1 +1,83 @@
-<p>tablero-cursos works!</p>
+<!-- Principal -->
+<section class="container-fluid text-center">
+  <!-- Barra de busqueda -->
+  <nav class="row">
+    <div class="BarraBusqueda">
+      <a routerLink="/perfil" class="Perfil">
+      <img src="../../assets/imgCarrusel/01.png" alt="Usuario">
+      <h6>Usuario</h6>
+      </a>
+
+      <input type="text" placeholder="Ingresa el nombre del curso aquí">
+      <button type="submit">Buscar</button>
+    </div>
+  </nav>
+
+
+  <nav class="row">
+    <!-- Filtros -->
+      <div class="col p-3 bg-body-secondary border border-secondary border-success rounded" style="margin: 1%; text-align: left; max-width: 20%;">
+        <h2 style="padding: 10px;">Filtros</h2>
+
+        <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                  Hard Skills
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                  Soft Skills
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                  En progreso
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                  Asignados
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                  Español
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                  Ingles
+              </label>
+            </div>
+      </div>
+
+      <!-- Galeria -->
+      <div class="col p-3 border border-secondary border-success rounded" style=" margin: 1%; margin-left: 0%;">
+        <!-- Escanea si tiene elementos el arreglo llamado "imagenes" -->
+        <ngb-carousel *ngIf="images">
+          <!-- Recorre el arreglo llamado "imagenes" -->
+          <ng-template ngbSlide *ngFor="let item of images">
+            <div class="picsum-img-wrapper">
+              <a class="btn">
+                <img [src]="item" alt="Random first slide" style="width: 150%; margin-left: -170px;">
+              </a>
+
+              <section class="carousel-caption">
+                <h3>Title</h3>
+                <nav class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" style="width: 25%">25%</div>
+                </nav>
+              </section>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+
+    </nav>
+</section>
