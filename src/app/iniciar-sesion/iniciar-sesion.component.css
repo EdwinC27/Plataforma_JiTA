@@ -1,0 +1,18 @@
+#columna{
+  max-width: 75%;
+}
+#fila{
+  max-width: 50%;
+}
+#pag{
+  margin-left: 700px;
+  margin-top: 300px;
+}
+#button{
+  margin-top: 40px;
+}
+#img{
+  max-width: 100px;
+  margin-left: 900px;
+  margin-top: -450px;
+}
