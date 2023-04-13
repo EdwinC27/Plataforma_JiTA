@@ -1,5 +1,9 @@
+import { Injectable } from "@angular/core";
 import { Curso } from "./curso.model";
 
+@Injectable({
+  providedIn: 'root'
+})
 export class CursosService{
 
   listaCursos:Curso[]=[
@@ -11,7 +15,8 @@ export class CursosService{
       tipos:["Español","Hard"],
       info:"Curso basico de springBoot",
       urlsVideos:["ltA-mIYyxhY","RyvP-GYe19s","mCogBfNIFvg","sLY9umEahso","MC9BwnURnfg","elz3vXttR-Q","C3Xwu7wuYAo","RABN1tDBN4Q"],
-      estado:"progreso"
+      estado:"progreso",
+      id:1
     },
     {
       image:"angularcourse.jpeg",
@@ -21,7 +26,8 @@ export class CursosService{
       tipos:["Español","Hard"],
       info:"Curso basico de el framework Angular",
       urlsVideos:[],
-      estado:"progreso"
+      estado:"progreso",
+      id:2
     },
     {
       image:"sqlCourse.jpeg",
@@ -31,7 +37,8 @@ export class CursosService{
       tipos:["Español","Hard"],
       info:"Curso basico para iniciar en el mundo de las bases de datos con SQL",
       urlsVideos:[],
-      estado:""
+      estado:"",
+      id:3
     },
     {
       image:"agileCourse.jpeg",
@@ -41,7 +48,8 @@ export class CursosService{
       tipos:["Español","Soft"],
       info:"En este curso aprendaras a trabajar con el framework de Agile con Scrum",
       urlsVideos:[],
-      estado:"progreso"
+      estado:"progreso",
+      id:4
     },
     {
       image:"comuniCourse.jpeg",
@@ -51,7 +59,8 @@ export class CursosService{
       tipos:["Español","Soft"],
       info:"En este aprenderas sobre comunicacion efectiva, asertiva y no violenta",
       urlsVideos:[],
-      estado:""
+      estado:"",
+      id:5
     },
     {
       image:"designCourse.jpeg",
@@ -61,7 +70,8 @@ export class CursosService{
       tipos:["Español","Soft"],
       info:"En este curso aprenderas a trabajar como con la metodologia de gestion de proyecto Design Thinking, un punto importante de este modelo es que esta 100% enfocado en el cliente final",
       urlsVideos:[],
-      estado:"progreso"
+      estado:"progreso",
+      id:6
     },
     {
       image:"negociCourse.jpeg",
@@ -71,7 +81,8 @@ export class CursosService{
       tipos:["Español","Soft"],
       info:"En este curso aprenderas sobre Negociacion",
       urlsVideos:[],
-      estado:""
+      estado:"",
+      id:7
     },
     {
       image:"emotionalintelCourse.jpeg",
@@ -81,7 +92,8 @@ export class CursosService{
       tipos:["Español","Soft"],
       info:"En este curso aprenderas",
       urlsVideos:[],
-      estado:""
+      estado:"",
+      id:8
     },
     {
       image:"java.png",
@@ -91,7 +103,8 @@ export class CursosService{
       tipos:["Español","Hard"],
       info:"En este curso aprenderas los conceptos basico para trabajar con el leguanje de programacion JAVA",
       urlsVideos:[],
-      estado:"progreso"
+      estado:"progreso",
+      id:9
     },
   ]
 

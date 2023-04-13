@@ -11,7 +11,7 @@
      </div>
   </div>
   <div class="row">
-      <div class="col p-3 bg-body-secondary border border-secondary border-success rounded" style="margin: 1%; text-align: left; max-width: fit-content;">
+      <div style="margin: 1%; text-align: left; max-width: fit-content; max-height: 300px;" class="col p-3 bg-body-secondary border border-secondary border-success rounded" >
         <h2>Filtros</h2>
           <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -46,84 +46,12 @@
       </div>
       <div class="col p-3 border border-secondary border-success rounded" style=" margin: 1%; margin-left: 0%;">
           <div class="row" >
-              <div class="col" style="margin: 2%;">
-                  <div class="card" style="width: 18rem;">
-                      <img src="https://www.gob.mx/cms/uploads/action_program/main_image/8419/post_8-cursos-online-gratuitos-de-harvard-sobre-la-historia-del-libro.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <a href="info" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-              </div>
-              <div class="col" style="margin: 2%;">
-                  <div class="card" style="width: 18rem;">
-                      <img src="https://www.gob.mx/cms/uploads/action_program/main_image/8419/post_8-cursos-online-gratuitos-de-harvard-sobre-la-historia-del-libro.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <a href="info" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-              </div>
-              <div class="col" style="margin: 2%;">
-                  <div class="card" style="width: 18rem;">
-                      <img src="https://www.gob.mx/cms/uploads/action_program/main_image/8419/post_8-cursos-online-gratuitos-de-harvard-sobre-la-historia-del-libro.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <a href="info" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                    </div>
-              </div>
-              <div class="col" style="margin: 2%;">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://www.gob.mx/cms/uploads/action_program/main_image/8419/post_8-cursos-online-gratuitos-de-harvard-sobre-la-historia-del-libro.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <a href="info" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col" style="margin: 2%;">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://www.gob.mx/cms/uploads/action_program/main_image/8419/post_8-cursos-online-gratuitos-de-harvard-sobre-la-historia-del-libro.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <a href="info" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col" style="margin: 2%;">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://www.gob.mx/cms/uploads/action_program/main_image/8419/post_8-cursos-online-gratuitos-de-harvard-sobre-la-historia-del-libro.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <a href="info" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col" style="margin: 2%;">
+            <div class="col" style="margin: 2%;" *ngFor="let item of lista">
               <div class="card" style="width: 18rem;">
-                  <img src="https://www.gob.mx/cms/uploads/action_program/main_image/8419/post_8-cursos-online-gratuitos-de-harvard-sobre-la-historia-del-libro.jpg" class="card-img-top" alt="...">
+                  <img src="assets/imgCursos/{{item.image}}" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="info" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-          </div>
-          <div class="col" style="margin: 2%;">
-              <div class="card" style="width: 18rem;">
-                  <img src="https://www.gob.mx/cms/uploads/action_program/main_image/8419/post_8-cursos-online-gratuitos-de-harvard-sobre-la-historia-del-libro.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="info" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-          </div>
-          <div class="col" style="margin: 2%;">
-              <div class="card" style="width: 18rem;">
-                  <img src="https://www.gob.mx/cms/uploads/action_program/main_image/8419/post_8-cursos-online-gratuitos-de-harvard-sobre-la-historia-del-libro.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <a href="info" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <a href="info" class="btn btn-primary">Ver curso!</a>
                   </div>
                 </div>
           </div>

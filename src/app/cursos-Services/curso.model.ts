@@ -7,4 +7,5 @@ export interface Curso{
   info:string
   urlsVideos:string[]
   estado:string
+  id:number
 }
