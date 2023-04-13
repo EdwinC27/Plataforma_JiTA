@@ -9,6 +9,7 @@ import { TableroCursosComponent } from './tablero-cursos/tablero-cursos.componen
 import { GaleriaCursosComponent } from './galeria-cursos/galeria-cursos.component';
 import { InfoCursoComponent } from './info-curso/info-curso.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PerfilComponent } from './perfil/perfil.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
