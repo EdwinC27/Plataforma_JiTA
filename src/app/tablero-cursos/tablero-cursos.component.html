@@ -1,7 +1,17 @@
+<nav>
+  <ul>
+    <li><a href="tablero">Inicio</a></li>
+    <li><a href="galeria">Cursos</a></li>
+    <li><a href="perfil">Perfil</a></li>
+  </ul>
+
+  <img src="assets/logoAcademy.png" alt="" id="img">
+</nav>
+
 <!-- Principal -->
 <section class="container-fluid text-center">
   <!-- Barra de busqueda -->
-  <nav class="row">
+  <div class="row">
     <div class="BarraBusqueda">
       <a routerLink="/perfil" class="Perfil">
       <img src="../../assets/imgCarrusel/01.png" alt="Usuario">
@@ -11,10 +21,10 @@
       <input type="text" placeholder="Ingresa el nombre del curso aquí">
       <button type="submit">Buscar</button>
     </div>
-  </nav>
+  </div>
 
 
-  <nav class="row">
+  <div class="row">
     <!-- Filtros -->
       <div class="col p-3 bg-body-secondary border border-secondary border-success rounded" style="margin: 1%; text-align: left; max-width: 20%;">
         <h2 style="padding: 10px;">Filtros</h2>
@@ -79,5 +89,5 @@
         </ngb-carousel>
       </div>
 
-    </nav>
+    </div>
 </section>

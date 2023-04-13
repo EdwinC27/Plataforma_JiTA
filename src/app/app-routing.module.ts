@@ -24,7 +24,7 @@ const routes: Routes = [
     component:InfoCursoComponent
   },
   {
-    path: "iniciar_sesion",
+    path: "",
     component: IniciarSesionComponent
   }
 ];
