@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CursosService } from '../cursos-Services/service';
 
 @Component({
   selector: 'app-tablero-cursos',
@@ -6,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./tablero-cursos.component.css']
 })
 export class TableroCursosComponent {
-	images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
-
+  constructor (private service:CursosService){}
+  images:any=this.service.listaCursos
 }

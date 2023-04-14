@@ -70,21 +70,24 @@
       <!-- Galeria -->
       <div class="col p-3 border border-secondary border-success rounded" style=" margin: 1%; margin-left: 0%;">
         <!-- Escanea si tiene elementos el arreglo llamado "imagenes" -->
-        <ngb-carousel *ngIf="images">
+        <ngb-carousel>
           <!-- Recorre el arreglo llamado "imagenes" -->
           <ng-template ngbSlide *ngFor="let item of images">
-            <div class="picsum-img-wrapper">
-              <a class="btn">
-                <img [src]="item" alt="Random first slide" style="width: 180%; margin-left: -250px;">
-              </a>
+              <div class="picsum-img-wrapper">
+                  <img src="assets/imgCursos/{{item.image}}" alt="{{ item.image }}" style="width: 90%; ">
 
-              <section class="carousel-caption">
-                <h3>Title</h3>
-                <nav class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                  <div class="progress-bar" style="width: 25%">25%</div>
-                </nav>
-              </section>
-            </div>
+                <section class="carousel-caption">
+                  <h3 style="color: black;">{{ item.name }}</h3>
+
+                  <s *ngIf="item.estado != 'progreso'">
+                    <a class="btn btn-primary" href="#">Iniciar</a>
+                  </s>
+
+                  <nav class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" *ngIf="item.estado == 'progreso'">
+                    <div class="progress-bar" style="width: {{ item.progreso }}%" >{{ item.progreso }}%</div>
+                  </nav>
+                </section>
+              </div>
           </ng-template>
         </ngb-carousel>
       </div>
