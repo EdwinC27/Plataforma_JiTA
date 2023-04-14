@@ -20,7 +20,7 @@ const routes: Routes = [
     component: PerfilComponent
   },
   {
-    path:"info",
+    path:"info/:id/:index",
     component:InfoCursoComponent
   },
   {

@@ -23,132 +23,22 @@
   <div class="row">
     <div class="col" style="max-width: 80%; margin: 1%; margin-right: 0%; ">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/ltA-mIYyxhY?rel=0" title="YouTube video" allowfullscreen></iframe>
+        <iframe [src]="safeSrc" title="YouTube video" allowfullscreen></iframe>
       </div>
       <p class="text-center" style="padding-top: 20px;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ullam ut! Ducimus aliquid explicabo nobis. Autem,
-        ut? Natus ipsum nesciunt ut quidem esse itaque eveniet, suscipit culpa possimus eligendi sunt!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, ullam ut! Ducimus aliquid explicabo nobis. Autem,
-        ut? Natus ipsum nesciunt ut quidem esse itaque eveniet, suscipit culpa possimus eligendi sunt!
+        {{curso.info}}
       </p>
     </div>
-
-    <div class="col  p-3 bg-body-secondary border border-secondary border-success rounded" data-bs-spy="scroll" data-bs-smooth-scroll="true" style="max-width: 20%; margin: 1%; overflow: auto; height: 715px;">
-      <div class="row ">
-        <div class="card mb-3" style="max-width: fit-content;">
-          <div class="row g-0">
-            <div class="col">
-              <a class="btn"><img src="https://i.ytimg.com/vi/ltA-mIYyxhY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA7srqYaLSCkv3EAS33KetWEicVZQ" class="img-fluid" alt="..."></a>
-            </div>
-            <div class="col">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="col" style="max-width: 20%; margin: 1%;">
+    <div class="col p-3 bg-body-secondary border border-secondary border-success rounded" data-bs-spy="scroll" data-bs-smooth-scroll="true" style=" max-height: 400px; overflow: auto; height: 715px;">
+      <div class="row" *ngFor="let item of curso.imageUrl;let indice=index">
+          <a class="btn" href="info/{{id}}/{{indice}}"><img src="{{item}}" class="img-fluid"></a>
       </div>
-      <div class="row">
-        <div class="card mb-3" style="max-width: fit-content;">
-          <div class="row g-0">
-            <div class="col">
-              <a class="btn"><img src="https://i.ytimg.com/vi/RyvP-GYe19s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB6RjdCOHbucvC3nWnaz-Nx_8dkhQ" class="img-fluid" alt="..."></a>
-            </div>
-            <div class="col">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card mb-3" style="max-width: fit-content;">
-          <div class="row g-0">
-            <div class="col">
-              <a class="btn"><img src="https://i.ytimg.com/vi/mCogBfNIFvg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_wKOODKmywwVTWd5umkPk6H5wkw" class="img-fluid" alt="..."></a>
-            </div>
-            <div class="col">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card mb-3" style="max-width: fit-content;">
-          <div class="row g-0">
-            <div class="col">
-              <a class="btn"><img src="https://i.ytimg.com/vi/sLY9umEahso/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCtkGgmUkf26UpsBgbLg_sDOWMZlw" class="img-fluid" alt="..."></a>
-            </div>
-            <div class="col">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card mb-3" style="max-width: fit-content;">
-          <div class="row g-0">
-            <div class="col">
-              <a class="btn"><img src="https://i.ytimg.com/vi/MC9BwnURnfg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC5mxvRaUxyz_dCVy5kEtPysmp7aQ" class="img-fluid" alt="..."></a>
-            </div>
-            <div class="col">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card mb-3" style="max-width: fit-content;">
-          <div class="row g-0">
-            <div class="col">
-              <a class="btn"><img src="https://i.ytimg.com/vi/elz3vXttR-Q/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAUWSi0aSI3KpsCnDWg8gmSM6y6eg" class="img-fluid" alt="..."></a>
-            </div>
-            <div class="col">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card mb-3" style="max-width: fit-content;">
-          <div class="row g-0">
-            <div class="col">
-              <a class="btn"><img src="https://i.ytimg.com/vi/C3Xwu7wuYAo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAXZ4PeehyUg-t7uJPbiU9dBC1iOg" class="img-fluid" alt="..."></a>
-            </div>
-            <div class="col">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="card mb-3" style="max-width: fit-content;">
-          <div class="row g-0">
-            <div class="col">
-              <a class="btn"><img src="https://i.ytimg.com/vi/RABN1tDBN4Q/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBH3xJjhgryXDRLx6ucek3jfeqwbw" class="img-fluid" alt="..."></a>
-            </div>
-            <div class="col">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-    <button href="#" class="btn btn-primary" style=" position: fixed; bottom: 0; background-color: rgb(4, 0, 255); font-size: 20px;">Guardar</button>
+    <div class="row">
+      <button href="#" class="btn btn-primary" style="font-size: 20px; margin-top: 20%;">Guardar</button>
+    </div>
+  </div>
   </div>
 </div>
 

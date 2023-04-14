@@ -61,7 +61,7 @@
                   <img src="assets/imgCursos/{{item.image}}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">{{item.name}}</h5>
-                    <a href="info" class="btn btn-primary">Ver curso!</a>
+                    <a class="btn btn-primary" (click)="enviarCurso(item.id)">Ver curso!</a>
                   </div>
                 </div>
           </div>

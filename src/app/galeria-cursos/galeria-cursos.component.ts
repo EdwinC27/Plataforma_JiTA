@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { CursosService } from '../cursos-Services/service';
+import { Router } from "@angular/router";
 import { Users } from '../users/users.service';
 
 @Component({
@@ -10,7 +12,7 @@ import { Users } from '../users/users.service';
 })
 export class GaleriaCursosComponent{
 
-  constructor (private service:CursosService, private user:Users, private router: ActivatedRoute){}
+  constructor (private service:CursosService, private user:Users, private router: ActivatedRoute,private router1:Router){}
 
   lista:any=this.service.listaCursos
 
@@ -29,4 +31,7 @@ export class GaleriaCursosComponent{
     this.img = this.usuario["img"]
 
   }
+  enviarCurso(id: number) {
+    this.router1.navigate(['/info',id,0])
+   }
 }
