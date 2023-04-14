@@ -32,7 +32,12 @@
     <div class="col" style="max-width: 20%; margin: 1%;">
     <div class="col p-3 bg-body-secondary border border-secondary border-success rounded" data-bs-spy="scroll" data-bs-smooth-scroll="true" style=" max-height: 400px; overflow: auto; height: 715px;">
       <div class="row" *ngFor="let item of curso.imageUrl;let indice=index">
+        <div *ngIf="indice==url">
+          <a class="btn" href="info/{{idUsuario}}/{{id}}/{{indice}}" style="background-color: rgb(206, 207, 207);"><img src="{{item}}" class="img-fluid"></a>
+        </div>
+        <div *ngIf="indice!=url">
           <a class="btn" href="info/{{idUsuario}}/{{id}}/{{indice}}"><img src="{{item}}" class="img-fluid"></a>
+        </div>
       </div>
     </div>
     <div class="row">
