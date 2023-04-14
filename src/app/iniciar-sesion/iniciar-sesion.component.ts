@@ -11,6 +11,7 @@ export class IniciarSesionComponent {
   inputCorreo:string = "";
   inputContrasena:string = "";
   entro: boolean = false;
+  id:any;
 
   constructor(private user:Users, private router: Router) {}
 
@@ -21,11 +22,12 @@ export class IniciarSesionComponent {
 
       if(valores.contraseña == this.inputContrasena && valores.usuario == this.inputCorreo) {
         this.entro = true;
+        this.id = indice;
       }
     }
 
     if(this.entro) {
-      this.router.navigate(["tablero"]);
+      this.router.navigate(['/tablero',this.id]);
     } else {
       alert("Error contraseña o usuario incorrecto");
     }

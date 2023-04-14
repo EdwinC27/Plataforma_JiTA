@@ -12,7 +12,7 @@ const routes: Routes = [
   component:GaleriaCursosComponent
   },
   {
-    path: "tablero",
+    path: "tablero/:id",
     component: TableroCursosComponent
   },
   {
