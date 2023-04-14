@@ -20,16 +20,15 @@ export class InfoCursoComponent implements OnInit{
   nombre:any;
   img:any;
   cursos:any;
+  idUsuario:any;
 
   ngOnInit(): void {
     this.id = this.router1.snapshot.paramMap.get("id");
     this.url = this.router1.snapshot.paramMap.get("index");
     this.curso =this.service.listaCursos[this.id]
     this.safeSrc =  this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/"+this.curso.urlsVideos[this.url]);
-
-    this.id = this.router.snapshot.paramMap.get("idUsuario");
-    this.usuario = this.user.listaUsers[this.id]
-
+    this.idUsuario= this.router.snapshot.paramMap.get("idUsuario");
+    this.usuario = this.user.listaUsers[this.idUsuario]
     this.nombre = this.usuario["usuario"];
     this.img = this.usuario["img"]
   }
