@@ -1,8 +1,8 @@
 <nav >
   <ul>
-    <li><a href="tablero">Inicio</a></li>
-    <li><a href="galeria">Cursos</a></li>
-    <li><a href="perfil">Perfil</a></li>
+    <li><a href="tablero/{{id}}">Inicio</a></li>
+    <li><a href="galeria/{{id}}">Cursos</a></li>
+    <li><a href="perfil/{{id}}">Perfil</a></li>
   </ul>
 
   <img src="assets/logoAcademy.png" alt="" id="img">
@@ -12,8 +12,8 @@
   <div class="row">
     <div class="BarraBusqueda">
       <a routerLink="/perfil" class="Perfil">
-      <img src="assets/imgCarrusel/01.png" alt="Usuario">
-      <h6>Usuario</h6>
+        <img src="{{ img }}" alt="Usuario">
+        <h6> {{ nombre }}</h6>
       </a>
 
       <input type="text" placeholder="Ingresa el nombre del curso aquí">

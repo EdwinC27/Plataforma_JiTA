@@ -8,7 +8,7 @@ import { TableroCursosComponent } from './tablero-cursos/tablero-cursos.componen
 
 const routes: Routes = [
   {
-  path:"galeria",
+  path:"galeria/:id",
   component:GaleriaCursosComponent
   },
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
     component: TableroCursosComponent
   },
   {
-    path: "perfil",
+    path: "perfil/:id",
     component: PerfilComponent
   },
   {

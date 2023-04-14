@@ -6,4 +6,6 @@ export interface Usuarios {
   img: string
   id: string
   curso: Curso[]
+  info: string
+  certificados: any[]
 }

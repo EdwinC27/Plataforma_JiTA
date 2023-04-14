@@ -20,10 +20,8 @@ export class TableroCursosComponent implements OnInit {
     this.id = this.router.snapshot.paramMap.get("id");
     this.usuario = this.user.listaUsers[this.id]
 
-    for (const clave in this.usuario) {
-      this.nombre = this.usuario["usuario"];
-      this.img = this.usuario["img"]
-      this.cursos = this.usuario["curso"]
-    }
+    this.nombre = this.usuario["usuario"];
+    this.img = this.usuario["img"]
+    this.cursos = this.usuario["curso"]
   }
 }

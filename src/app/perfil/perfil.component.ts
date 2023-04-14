@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Users } from '../users/users.service';
 
 @Component({
   selector: 'app-perfil',
@@ -6,5 +8,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent {
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  constructor (private user:Users, private router: ActivatedRoute){}
+
+  id:any;
+  usuario:any;
+
+  nombre:any;
+  img:any;
+  cursos:any;
+  info:any;
+  imgcursosRealizados:any;
+
+  ngOnInit(): void {
+    this.id = this.router.snapshot.paramMap.get("id");
+    this.usuario = this.user.listaUsers[this.id]
+
+    this.nombre = this.usuario["usuario"];
+    this.img = this.usuario["img"]
+    this.info = this.usuario["info"]
+    this.imgcursosRealizados = this.usuario["certificados"]
+  }
 }

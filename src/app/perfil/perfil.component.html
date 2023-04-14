@@ -1,8 +1,8 @@
 <nav>
   <ul>
-    <li><a href="tablero">Inicio</a></li>
-    <li><a href="galeria">Cursos</a></li>
-    <li><a href="perfil">Perfil</a></li>
+    <li><a href="tablero/{{id}}">Inicio</a></li>
+    <li><a href="galeria/{{id}}">Cursos</a></li>
+    <li><a href="perfil/{{id}}">Perfil</a></li>
   </ul>
 
   <img src="assets/logoAcademy.png" alt="" id="img">
@@ -10,13 +10,8 @@
 
 <!-- Imagen y Presentacion -->
 <section class="section1">
-  <img src="../../assets/imgCarrusel/01.png" alt="Usuario">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat odio porro qui
-    veniam atque consectetur, at, labore nisi nihil iste animi magni modi possimus alias,
-    repellat adipisci suscipit nam. Nostrum?
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat odio porro qui
-    veniam atque consectetur, at, labore nisi nihil iste animi magni modi possimus alias,
-    repellat adipisci suscipit nam. Nostrum?</p>
+  <img src="{{ img }}" alt="Usuario">
+  <p>{{ info }}</p>
 </section>
 
 
@@ -25,13 +20,14 @@
 <h1 class="text-center">Certificados</h1>
 
   <!-- Galeria -->
-  <div class="col p-3 border border-secondary border-success rounded" style=" margin: 1%; margin-left: 0%;">
+  <div class="col p-3 border border-secondary border-success rounded" style=" margin: 1%; margin-left: 0%;
+  width: 100%; ">
     <!-- Escanea si tiene elementos el arreglo llamado "imagenes" -->
-    <ngb-carousel *ngIf="images">
+    <ngb-carousel *ngIf="imgcursosRealizados">
       <!-- Recorre el arreglo llamado "imagenes" -->
-      <ng-template ngbSlide *ngFor="let item of images">
+      <ng-template ngbSlide *ngFor="let item of imgcursosRealizados">
         <div class="picsum-img-wrapper">
-          <img [src]="item" alt="Random first slide" style="width: 150%; margin-left: -170px;">
+          <img [src]="item" alt="item" style="width: 100%;">
         </div>
       </ng-template>
     </ngb-carousel>
