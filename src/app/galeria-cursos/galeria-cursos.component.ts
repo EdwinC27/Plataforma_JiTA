@@ -16,7 +16,7 @@ export class GaleriaCursosComponent{
 
   lista:any=this.service.listaCursos
 
-  id:any;
+  idUsuario:any;
   usuario:any;
 
   nombre:any;
@@ -24,14 +24,14 @@ export class GaleriaCursosComponent{
   cursos:any;
 
   ngOnInit(): void {
-    this.id = this.router.snapshot.paramMap.get("id");
-    this.usuario = this.user.listaUsers[this.id]
+    this.idUsuario = this.router.snapshot.paramMap.get("id");
+    this.usuario = this.user.listaUsers[this.idUsuario]
 
     this.nombre = this.usuario["usuario"];
     this.img = this.usuario["img"]
 
   }
   enviarCurso(id: number) {
-    this.router1.navigate(['/info',id,0])
+    this.router1.navigate(['/info',this.idUsuario,id,0])
    }
 }
