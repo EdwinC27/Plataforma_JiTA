@@ -26,7 +26,11 @@ export class Users {
       id: "1",
       curso: [],
       info: "Hola mi nombre es Luis Eduardo Ocampo de la Torre y tengo 19 años y actualmente trabajo como becario para AstraZeneca de la mano con Michael Page. Estudié en la preparatoria CECyTEJ plantel 17 de Tesistán y me gradué con una carrera técnica en programación.",
-      certificados: []
+      certificados: [
+        "assets/imgCertificados/1/goITSs.png",
+        "assets/imgCertificados/1/JavaSs.png",
+        "assets/imgCertificados/1/LANIASs.png"
+      ]
     }
   ]
 }
