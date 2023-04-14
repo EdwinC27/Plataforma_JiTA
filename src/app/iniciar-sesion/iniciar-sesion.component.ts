@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Users } from '../users/users.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class IniciarSesionComponent {
   inputContrasena:string = "";
   entro: boolean = false;
 
-  constructor(private user:Users) {}
+  constructor(private user:Users, private router: Router) {}
 
   verificarUsuario() {
 
@@ -22,6 +23,11 @@ export class IniciarSesionComponent {
         this.entro = true;
       }
     }
-    console.log(this.entro)
+
+    if(this.entro) {
+      this.router.navigate(["tablero"]);
+    } else {
+      alert("Error contraseña o usuario incorrecto");
+    }
   }
 }
